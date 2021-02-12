@@ -23,8 +23,8 @@ locateurl = 'https://airapi.airly.eu/v2/installations/nearest/'
 infourl = f'https://airapi.airly.eu/v2/measurements/point'
 headers = {'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64; rv:78.0) Gecko/20100101 Firefox/78.0'}
 
-# print(f'link to instalations: {locateurl}?lat={lat}&lng={lng}&apikey={key}')
-# print(f'link to measurements: {infourl}?lat={lat}&lng={lng}&apikey={key}')
+print(f'link to instalations: {locateurl}?lat={lat}&lng={lng}&apikey={key}')
+print(f'link to measurements: {infourl}?lat={lat}&lng={lng}&apikey={key}')
 
 rinfo = requests.get(infourl, params=params, headers=headers)
 rlocate = requests.get(locateurl, params=params, headers=headers)
