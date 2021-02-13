@@ -2,6 +2,7 @@ import requests
 
 auto = False
 
+#system autolocate, który szuka lokalizacji po ip
 if auto == True:
     r = requests.get('https://ipinfo.io')
     locate = r.json()['loc']
