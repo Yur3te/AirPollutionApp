@@ -43,18 +43,21 @@ description = rinfo_dict['current']['indexes'][0]['description']
 pm1 = rinfo_dict['current']['values'][0]['value']
 
 #dane pm25
-pm25 = rinfo_dict['current']['values'][0]['value']
+pm25 = rinfo_dict['current']['values'][1]['value']
 pm25Limit = rinfo_dict['current']['standards'][0]['limit']
 pm25precent = rinfo_dict['current']['standards'][0]['percent']
 
 #dane pm10
-pm10 = rinfo_dict['current']['values'][1]['value']
+pm10 = rinfo_dict['current']['values'][2]['value']
 pm10Limit = rinfo_dict['current']['standards'][1]['limit']
 pm10precent = rinfo_dict['current']['standards'][1]['percent']
 
 #inne dane pogodowe
+#ciśnienie
 pressure = rinfo_dict['current']['values'][3]['value']
+#wilgotność
 humidity = rinfo_dict['current']['values'][4]['value']
+#temperatura
 temperature = rinfo_dict['current']['values'][5]['value']
 
 
@@ -64,12 +67,10 @@ print(f"Level of air pollution is: {pollutionLevel} CAQI, what means it's {descr
 print("----------------------------")
 print("Other air pollutions:")
 print(f'Level of pm1 is {pm1}')
-print("-------")
 print(f'Level of pm25 is {pm25}. Limit of pm25 is {pm25Limit}, what meands current pollution is {pm25precent}%')
-print("-------")
-print(f'Level of pm25 is {pm10}. Limit of pm25 is {pm10Limit}, what meands current pollution is {pm10precent}%')
-print("-------")
+print(f'Level of pm10 is {pm10}. Limit of pm10 is {pm10Limit}, what meands current pollution is {pm10precent}%')
+print("-----------------------")
 print("Other weather statistic:")
-print(f'Temperature: {temperature}')
-print(f'Pressure: {pressure}')
-print(f'Humidity: {humidity}')
+print(f'Temperature: {temperature}°C')
+print(f'Pressure: {pressure}hPa')
+print(f'Humidity: {humidity}%')

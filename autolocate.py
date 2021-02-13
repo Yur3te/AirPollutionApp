@@ -1,6 +1,6 @@
 import requests
 
-auto = False
+auto = True
 
 #system autolocate, który szuka lokalizacji po ip
 if auto == True:
